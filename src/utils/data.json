@@ -1,0 +1,36 @@
+{
+    "soundItems": [
+        {
+            "id": 1,
+            "image": "https://i.scdn.co/image/ab67616d0000b2731efbf8b77e571388b3520f72",
+            "title": "Challa",
+            "unique_plays": 18,
+            "total_plays": 44,
+            "completion_rate": 80
+        },
+        {
+            "id": 2,
+            "image": "https://i.scdn.co/image/ab67616d0000b2730f64fc90629040d10840c893",
+            "title": "Do Guna",
+            "unique_plays": 15,
+            "total_plays": 25,
+            "completion_rate": 70
+        },
+        {
+            "id": 3,
+            "image": "https://i.scdn.co/image/ab67616d0000b2731d1cc2e40d533d7bcebf5dae",
+            "title": "295",
+            "unique_plays": 10,
+            "total_plays": 30,
+            "completion_rate": 55
+        },
+        {
+            "id": 4,
+            "image": "https://i.scdn.co/image/ab67616d0000b2739f5e60e284748060eda5d2a1",
+            "title": "Aavegi",
+            "unique_plays": 35,
+            "total_plays": 60,
+            "completion_rate": 27
+        }
+    ]
+}
