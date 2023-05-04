@@ -18,11 +18,23 @@ const Song: NextPage = () => {
             <div className="flex flex-col justify-center px-8">
                 <div className="flex flex-col justify-center px-8">
                     <div className="flex flex-col items-start justify-center max-w-4xl w-full pb-16 mx-auto gap-8">
-                        <Link href="/">
-                            <h1 className="md:text-9xl text-5xl py-8 font-black font-sans tracking-wider text-white">
-                                {id}
-                            </h1>
-                        </Link>
+                        <div className="w-full">
+                            <div className="flex flex-row-reverse justify-between items-center gap-4">
+                                <Link href="/" className="rounded-full p-2 bg-gray-700">
+                                    <svg
+                                        className="md:w-8 md:h-8 w-4 h-4 cursor-pointer"
+                                        fill="white"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        version="1.0"
+                                        viewBox="0 0 50 50">
+                                        <path d="M25 9.094 7.281 25.374h5.563v15.532h24.312V25.375h5.563L25 9.094z" />
+                                    </svg>
+                                </Link>
+                                <h1 className="md:text-9xl text-5xl py-8 font-black font-sans tracking-wider text-white">
+                                    {id}
+                                </h1>
+                            </div>
+                        </div>
                         <h2 className="mb-4 text-lg font-medium text-white md:text-xl text-center">
                             Completion Rate - {song?.completion_rate}%
                         </h2>
