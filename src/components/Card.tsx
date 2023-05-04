@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { BarChart } from "./BarChart";
 import Link from "next/link";
+
+import { BarChart } from "./BarChart";
 
 type TProps = {
     image: string,
@@ -21,7 +22,7 @@ export default function Card({ image, title, completion_rate, unique_plays, tota
     return (
         <div
             className="transform hover:scale-[1.01] transition-all rounded-xl w-full p-4">
-            <h5 className="mb-1 text-xl font-bold tracking-wide text-white md:text-2xl">{title}</h5>
+            <h1 className="mb-1 text-xl font-bold tracking-wide text-white md:text-2xl">{title}</h1>
             <div className="flex flex-col w-full rounded-lg md:flex-row">
                 <div className="md:min-w-max md:my-auto md:mx-0">
                     {image ?
@@ -40,17 +41,17 @@ export default function Card({ image, title, completion_rate, unique_plays, tota
                 </div>
                 <div className="hidden md:flex w-full items-center justify-evenly gap-8 pt-6 md:pl-6 md:pt-0 md:items-start">
                     <div className="flex flex-col">
-                        <h5 className="mb-4 text-lg font-medium text-white md:text-xl text-center">
+                        <h2 className="mb-4 text-lg font-medium text-white md:text-xl text-center">
                             Unique & Total Plays
-                        </h5>
+                        </h2>
                         <div>
                             <BarChart unique_plays={unique_plays} total_plays={total_plays} title={title} />
                         </div>
                     </div>
                     <div className="flex flex-col items-center justify-center">
-                        <h5 className="mb-4 text-lg font-medium text-white md:text-xl text-center">
+                        <h2 className="mb-4 text-lg font-medium text-white md:text-xl text-center">
                             Completion Rate - {completion_rate}%
-                        </h5>
+                        </h2>
                         <div className="radial-progress text-white" style={style}>
                             {completion_rate}%
                         </div>

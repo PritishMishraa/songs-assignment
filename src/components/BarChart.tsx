@@ -16,7 +16,7 @@ ChartJS.register(
     Tooltip,
 );
 
-export const options = {
+const options = {
     scales: {
         y: {
             max: 100,
@@ -28,8 +28,14 @@ export const options = {
 
 const labels = ['Unique Plays', 'Total Plays'];
 
-export function BarChart({ unique_plays, total_plays, title }: { unique_plays: number, total_plays: number, title: string }) {
-    
+type TBarChart = {
+    unique_plays: number,
+    total_plays: number,
+    title: string,
+}
+
+export function BarChart({ unique_plays, total_plays, title }: TBarChart) {
+
     const data = {
         labels,
         datasets: [

@@ -10,6 +10,7 @@ const Song: NextPage = () => {
     const { id } = router.query
 
     const song = data.soundItems.find((song) => song.title === id)
+
     const style = { "--value": song?.completion_rate } as React.CSSProperties
 
     return (
@@ -22,17 +23,17 @@ const Song: NextPage = () => {
                                 {id}
                             </h1>
                         </Link>
-                        <h5 className="mb-4 text-lg font-medium text-white md:text-xl text-center">
+                        <h2 className="mb-4 text-lg font-medium text-white md:text-xl text-center">
                             Completion Rate - {song?.completion_rate}%
-                        </h5>
+                        </h2>
                         {
                             song && <div className="radial-progress text-white" style={style}>
                                 {song.completion_rate}%
                             </div>
                         }
-                        <h5 className="mb-4 text-lg font-medium text-white md:text-xl text-center">
+                        <h2 className="mb-4 text-lg font-medium text-white md:text-xl text-center">
                             Unique & Total Plays
-                        </h5>
+                        </h2>
                         {
                             song && <BarChart title={song.title} unique_plays={song.unique_plays} total_plays={song.total_plays} />
                         }
